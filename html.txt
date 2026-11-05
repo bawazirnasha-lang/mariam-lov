@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Love You Mariam ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #ffe0eb, #ffc1d6, #ff9ebc);
+    color: #c2185b;
+    text-align: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    padding: 70px 15px 40px;
+}
+
+h1 {
+    font-size: clamp(38px, 8vw, 75px);
+    color: #e91e63;
+    text-shadow: 3px 3px 8px #ffffff;
+    animation: heartbeat 2s infinite;
+}
+
+.subtitle {
+    font-size: 22px;
+    margin-top: 20px;
+    color: #ad1457;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    color: #ff1744;
+    font-size: 25px;
+    pointer-events: none;
+    z-index: 0;
+    animation: floatUp 7s linear infinite;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.8);
+    border-radius: 25px;
+    padding: 30px 20px;
+    margin: 25px auto;
+    max-width: 650px;
+    box-shadow: 0 8px 25px rgba(200,30,90,0.2);
+}
+
+.card h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+button {
+    background: #e91e63;
+    color: white;
+    border: none;
+    padding: 15px 28px;
+    border-radius: 30px;
+    font-size: 17px;
+    cursor: pointer;
+    margin: 12px;
+    transition: 0.3s;
+    box-shadow: 0 5px 12px #f48fb1;
+}
+
+button:hover {
+    background: #ad1457;
+    transform: scale(1.08);
+}
+
+.letter {
+    display: none;
+    background: #fff0f5;
+    border: 2px dashed #f06292;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 500px;
+    font-size: 19px;
+    line-height: 1.9;
+    animation: appear 0.5s ease;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.big-heart {
+    font-size: 85px;
+    animation: heartbeat 1.5s infinite;
+    margin: 20px;
+}
+
+footer {
+    padding: 35px 15px;
+    font-size: 18px;
+    color: #880e4f;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="big-heart">❤️</div>
+    <h1>I LOVE YOU MARIAM</h1>
+    <p class="subtitle">
+        You are my favorite person in the whole universe 💕
+    </p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>💗 A Little Message For You 💗</h2>
+        <p>
+            Dear Mariam,<br><br>
+            If I could choose one person to make happy
+            every single day, I would choose you.
+            You make my world brighter, my heart happier,
+            and my life more beautiful.
+            <br><br>
+            You are my favorite hello and my hardest goodbye.
+            I love you more than words can ever explain. ❤️
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>💌 Love Letters For Mariam</h2>
+        <p>Choose a little letter and open it! 💕</p>
+
+        <button onclick="openLetter(1)">💌 Letter 1</button>
+        <button onclick="openLetter(2)">💗 Letter 2</button>
+        <button onclick="openLetter(3)">🌷 Letter 3</button>
+
+        <div class="letter" id="letter1">
+            My beautiful Mariam,<br>
+            Every day I find another reason to love you.
+            Your smile is my favorite thing, and your happiness
+            means everything to me. Never forget how special you are.
+            ❤️
+        </div>
+
+        <div class="letter" id="letter2">
+            To my favorite girl,<br>
+            If love was a flower, I would give you an entire garden.
+            If love was stars, I would give you the whole sky.
+            You deserve all the happiness in the world. 🌸
+        </div>
+
+        <div class="letter" id="letter3">
+            Dear Mariam,<br>
+            No matter how many people I meet or how many places
+            I visit, you will always have a special place in my heart.
+            I choose you, today and every day. 💖
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>🥰 A Special Surprise</h2>
+        <p>There is something I want you to know...</p>
+
+        <button onclick="surprise()">
+            Click For Your Surprise ❤️
+        </button>
+
+        <div id="surpriseMessage" class="letter">
+            ❤️❤️❤️<br><br>
+            MARIAM, I LOVE YOU SO MUCH!<br><br>
+            You are my sunshine, my happiness,
+            my favorite person, and my sweetest dream.
+            <br><br>
+            FOREVER AND ALWAYS! 💍💕
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>💞 1000 Reasons To Love You</h2>
+        <p id="reason">
+            Your smile makes everything better. ❤️
+        </p>
+        <button onclick="nextReason()">Give Me Another Reason 💗</button>
+    </div>
+
+</div>
+
+<footer>
+    Made with endless love for Mariam ❤️<br>
+    You are loved more than you know. 💕<br>
+    ∞
+</footer>
+
+<script>
+
+// Floating hearts everywhere
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+
+    const hearts = ["❤️", "💕", "💗", "💖", "💘", "💝", "💞"];
+    heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (4 + Math.random() * 5) + "s";
+    heart.style.fontSize = (15 + Math.random() * 30) + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 9000);
+}
+
+setInterval(createHeart, 300);
+
+// Open love letters
+function openLetter(number) {
+    document.querySelectorAll(".letter").forEach(letter => {
+        if (letter.id.startsWith("letter")) {
+            letter.style.display = "none";
+        }
+    });
+
+    document.getElementById("letter" + number).style.display = "block";
+}
+
+// Special surprise
+function surprise() {
+    document.getElementById("surpriseMessage").style.display = "block";
+
+    for (let i = 0; i < 30; i++) {
+        setTimeout(createHeart, i * 100);
+    }
+}
+
+// Random reasons
+const reasons = [
+    "Your smile makes my whole day better. ❤️",
+    "You make my heart feel so happy. 💗",
+    "You are one of a kind. 🌷",
+    "Your happiness means everything to me. 💕",
+    "You make ordinary moments special. 🥰",
+    "You are my favorite person. 💖",
+    "You deserve the entire universe. 🌎",
+    "I love everything that makes you YOU. 💘",
+    "You make life more beautiful. 🌸",
+    "There is nobody like you, Mariam. ❤️"
+];
+
+let reasonIndex = 0;
+
+function nextReason() {
+    reasonIndex = (reasonIndex + 1) % reasons.length;
+    document.getElementById("reason").innerText = reasons[reasonIndex];
+}
+
+</script>
+
+</body>
+</html>
